@@ -1,0 +1,278 @@
+export type TrendingRecipe = {
+  id: string;
+  title: string;
+  image: string;
+  time: string;
+  likes: string;
+  views: string;
+  postedAgo: string;
+  excerpt: string;
+  chef: string;
+  chefRole: string;
+  chefAvatar: string;
+  summary: string;
+  ingredients: string[];
+  steps?: string[];
+  popularity: number;
+  createdAt: string;
+};
+
+export const trendingRecipes: TrendingRecipe[] = [
+  {
+    id: 'curry',
+    title: 'Cà Ri Gà',
+    image: 'https://images.unsplash.com/photo-1604909052743-94e838986d24?auto=format&fit=crop&w=1100&q=80',
+    time: '45 phút',
+    likes: '5',
+    views: '2458',
+    postedAgo: '20m trước',
+    excerpt: 'Công thức gà đậm vị, thơm mùi cà ri, hợp ăn cùng cơm nóng.',
+    chef: 'giosh-ryan',
+    chefRole: 'Josh Ryan',
+    chefAvatar: 'https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=240&q=80',
+    summary:
+      'Công thức này có thể được điều chỉnh theo sở thích ăn cay của bạn. Dùng gà nướng thơm mùi hương vị hoặc đổi thành ức gà cũng cho cảm giác mềm mọng và tốt cho sức khỏe.',
+    ingredients: [
+      '450g ức gà không xương, không da, cắt miếng vừa ăn',
+      '2 muỗng canh dầu thực vật',
+      '1 củ hành tây băm nhỏ',
+      '3 tép tỏi băm',
+      '1 muỗng canh bột cà ri',
+      '1 lon nước cốt dừa',
+    ],
+    popularity: 98,
+    createdAt: '2026-04-14T15:40:00.000Z',
+  },
+  {
+    id: 'macarons',
+    title: 'Macarons',
+    image: 'https://images.unsplash.com/photo-1612203985729-70726954388c?auto=format&fit=crop&w=1100&q=80',
+    time: '28 phút',
+    likes: '5',
+    views: '2279',
+    postedAgo: '1h trước',
+    excerpt: 'Món ngọt giòn nhẹ, nhân mềm mịn, thơm hương hạnh nhân.',
+    chef: 'dakota.mullen',
+    chefRole: 'Dakota Mullen',
+    chefAvatar: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=240&q=80',
+    summary:
+      'Công thức này sẽ tạo ra những chiếc bánh macarons ngọt ngào, thơm mộng, phù hợp cho mọi dịp lễ. Hãy thử nghiệm với các màu sắc và nhân bánh khác nhau để tạo nên những tác phẩm macarons độc đáo của riêng bạn.',
+    ingredients: [
+      '1 chén bột hạnh nhân',
+      '1 3/4 chén đường bột',
+      '3 lòng trắng trứng (nhiệt độ phòng)',
+      '1/4 chén đường cát',
+      'Nhân kem vị vani',
+    ],
+    popularity: 95,
+    createdAt: '2026-04-14T14:20:00.000Z',
+  },
+  {
+    id: 'burger',
+    title: 'Burger Gà',
+    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1100&q=80',
+    time: '44 phút',
+    likes: '4',
+    views: '1083',
+    postedAgo: '1h trước',
+    excerpt: 'Miếng gà áp chảo đậm vị kết hợp rau tươi và sốt mayo béo nhẹ.',
+    chef: 'cia_food',
+    chefRole: 'Cia Rodriguez',
+    chefAvatar: 'https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=240&q=80',
+    summary:
+      'Món burger gà này vô cùng dễ làm với hương vị tươi, kết hợp cân bằng theo chế độ một món ăn nhanh nhưng ngon mà cả gia đình đều yêu thích.',
+    ingredients: [
+      '450g thịt gà xay',
+      '1/4 chén bột chiên xù',
+      'Lá xà lách',
+      '2 nắp bánh mì',
+      '1 muỗng canh bơ hoặc sốt paprika',
+    ],
+    popularity: 90,
+    createdAt: '2026-04-14T14:00:00.000Z',
+  },
+  {
+    id: 'bechamel',
+    title: 'Mì Ý Béchamel',
+    image: 'https://images.unsplash.com/photo-1645112411341-6c4fd023882c?auto=format&fit=crop&w=1100&q=80',
+    time: '50 phút',
+    likes: '4.8',
+    views: '4564',
+    postedAgo: '1m trước',
+    excerpt: 'Sốt béchamel béo thơm ôm trọn sợi mì và nấm mềm ngọt.',
+    chef: 'cia_food',
+    chefRole: 'Cia Rodriguez',
+    chefAvatar: 'https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=240&q=80',
+    summary:
+      'Công thức này dễ dàng tùy chỉnh bằng cách thêm các loại rau củ như rau chân vịt hoặc bắp cải, đậu Hà Lan, hoặc cá chua bi để tăng thêm hương vị và kết cấu.',
+    ingredients: [
+      '225g mì Ý tùy chọn',
+      '2 ức gà không xương cắt thành miếng',
+      '2 vỉ nấm',
+      '2 muỗng canh bơ',
+      '2 muỗng canh bột mì đa dụng',
+      '2 cốc sữa',
+      '1 cốc phô mai bào',
+    ],
+    popularity: 88,
+    createdAt: '2026-04-14T15:59:00.000Z',
+  },
+  {
+    id: 'wings',
+    title: 'Cánh Gà Nướng',
+    image: 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=1100&q=80',
+    time: '38 phút',
+    likes: '4.1',
+    views: '31547',
+    postedAgo: '2.5 năm trước',
+    excerpt: 'Cánh gà nướng đậm vị sốt cay ngọt, phù hợp tiệc cuối tuần.',
+    chef: 'torres_meat',
+    chefRole: 'Alfredo Torres',
+    chefAvatar: 'https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=240&q=80',
+    summary:
+      'Hãy thoải mái điều chỉnh gia vị và thời gian nấu dựa trên sở thích của bạn và độ giòn mong muốn.',
+    ingredients: [
+      '0.5kg cánh gà',
+      '2 muỗng canh dầu ô liu',
+      '1 muỗng cà phê tỏi bột',
+      '1 muỗng cà phê tiêu đen',
+      '1 muỗng cà phê ớt bột',
+      'Tương ớt hoặc mật ong',
+    ],
+    popularity: 75,
+    createdAt: '2023-11-12T09:30:00.000Z',
+  },
+  {
+    id: 'brownie',
+    title: 'Bánh Brownie Hạt',
+    image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1100&q=80',
+    time: '14 phút',
+    likes: '4.7',
+    views: '78579',
+    postedAgo: '3 năm trước',
+    excerpt: 'Bánh brownie hạt mịn, hậu vị cacao rõ, dùng nóng hay lạnh đều ngon.',
+    chef: 'flavorswithivan',
+    chefRole: 'Ivan Volch',
+    chefAvatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=240&q=80',
+    summary:
+      'Hãy thoải mái tùy chỉnh món bánh brownie hạt này bằng cách sử dụng loại hạt yêu thích của bạn hoặc thêm sô-cô-la chip để tăng thêm độ đậm đà.',
+    ingredients: [
+      '1/2 cốc bơ lạt',
+      '1 cốc đường cát',
+      '2 quả trứng gà',
+      '1 muỗng cà phê chiết xuất vani',
+      '1/3 cốc bột cacao không đường',
+      '1/2 cốc bột mì đa dụng',
+      '1/4 muỗng cà phê muối',
+      '1/2 cốc hạt băm nhỏ',
+    ],
+    steps: [
+      'Làm nóng lò ở 180°C và lót giấy nến cho khuôn nướng để dễ lấy bánh sau khi chín.',
+      'Đun chảy bơ rồi trộn cùng đường cát, khuấy đều đến khi hỗn hợp mịn và đồng nhất.',
+      'Cho trứng và vani vào hỗn hợp bơ đường, đánh nhẹ tay đến khi quyện đều.',
+      'Rây cacao, bột mì và muối vào, trộn vừa đủ tay rồi thêm hạt băm để giữ kết cấu mềm ẩm.',
+      'Đổ bột vào khuôn, nướng 20-25 phút, để nguội bớt rồi cắt miếng và thưởng thức.',
+    ],
+    popularity: 84,
+    createdAt: '2023-04-14T09:00:00.000Z',
+  },
+  {
+    id: 'spring-roll',
+    title: 'Gỏi Cuốn',
+    image: 'https://images.unsplash.com/photo-1625937753213-5fd7db8d8f02?auto=format&fit=crop&w=1100&q=80',
+    time: '35 phút',
+    likes: '4',
+    views: '387',
+    postedAgo: '1 giờ trước',
+    excerpt: 'Món cuốn nhẹ bụng với rau tươi và thịt luộc thanh vị.',
+    chef: 'neil_tran',
+    chefRole: 'Neil Tran-Creel',
+    chefAvatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=240&q=80',
+    summary:
+      'Gỏi cuốn Việt Nam mềm dai, hoặc hoàn hảo với hương miếng cuốn tươi mát, hướng được yêu thích trong ẩm thực châu Á.',
+    ingredients: [
+      'Bánh tráng',
+      'Rau xà lách và các loại rau thơm',
+      '1 quả dưa chuột thái sợi',
+      '100g tôm chín thái mỏng',
+      'Thịt heo luộc thái mỏng',
+    ],
+    popularity: 70,
+    createdAt: '2026-04-14T15:10:00.000Z',
+  },
+  {
+    id: 'iced-tea',
+    title: 'Trà Xanh Đá',
+    image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=1100&q=80',
+    time: '23 phút',
+    likes: '3',
+    views: '78',
+    postedAgo: '1.25h trước',
+    excerpt: 'Trà thanh mát với vị chua nhẹ, thêm đá là uống cực đã.',
+    chef: 'chef_emily',
+    chefRole: 'Emily Carter',
+    chefAvatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=240&q=80',
+    summary:
+      'Đồ uống làm mát mùa hè này thích hợp cho mọi thời điểm và cần rất ít nguyên liệu.',
+    ingredients: [
+      '4 cốc nước',
+      '2 túi trà xanh',
+      'Đá viên',
+      'Tùy chọn: lát chanh tươi, lá bạc hà',
+      '3 muỗng canh đường',
+    ],
+    popularity: 62,
+    createdAt: '2026-04-14T13:45:00.000Z',
+  },
+  {
+    id: 'pizza',
+    title: 'Bánh Pizza Salami & Phô Mai',
+    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1100&q=80',
+    time: '44 phút',
+    likes: '3.5',
+    views: '410',
+    postedAgo: '2 phút trước',
+    excerpt: 'Công thức nhanh cho pizza đậm phô mai, dễ làm tại nhà.',
+    chef: 'gaminthechef',
+    chefRole: 'William Smith',
+    chefAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&q=80',
+    summary:
+      'Công thức pizza nhanh không cầu kỳ, thích hợp cho bữa tối cuối tuần hoặc những ngày muốn làm món ngon cùng gia đình.',
+    ingredients: [
+      '1 đế bánh pizza làm sẵn',
+      '1/2 chén sốt pizza',
+      '1 chén phô mai mozzarella',
+      '8 lát salami',
+      'Lá oregano khô',
+    ],
+    popularity: 80,
+    createdAt: '2026-04-14T15:58:00.000Z',
+  },
+  {
+    id: 'tiramisu',
+    title: 'Bánh Tiramisu',
+    image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=1100&q=80',
+    time: '25 phút',
+    likes: '5',
+    views: '1299',
+    postedAgo: '3 giờ trước',
+    excerpt: 'Tráng miệng cổ điển với mascarpone mịn và cacao thơm.',
+    chef: 'andrew.mor',
+    chefRole: 'Andrew Mor',
+    chefAvatar: 'https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=240&q=80',
+    summary:
+      'Món tráng miệng cổ điển với lớp kem mascarpone mịn, vị cà phê đậm và cacao phủ mặt tạo cân bằng tuyệt vời.',
+    ingredients: [
+      '200g mascarpone',
+      '200ml whipping cream',
+      '2 muỗng đường',
+      'Bánh ladyfinger',
+      'Cà phê espresso',
+      'Bột cacao',
+    ],
+    popularity: 68,
+    createdAt: '2026-04-14T12:20:00.000Z',
+  },
+];
+
+export const featuredRecipeId = 'curry';
