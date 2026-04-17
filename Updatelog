@@ -1,0 +1,85 @@
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { useState } from 'react';
+import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { PrimaryButton } from '../components/PrimaryButton';
+import { palette } from '../theme';
+import { RootStackParamList } from '../types/navigation';
+
+type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
+
+export function LoginScreen({ navigation }: Props) {
+  const [email, setEmail] = useState('example@example.com');
+  const [password, setPassword] = useState('12345678');
+
+  return (
+    <SafeAreaView style={styles.root}>
+      <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+        <Text style={styles.title}>Đăng Nhập</Text>
+
+        <View style={styles.form}>
+          <Text style={styles.label}>Email</Text>
+          <TextInput value={email} onChangeText={setEmail} style={styles.input} keyboardType="email-address" />
+
+          <Text style={styles.label}>Password</Text>
+          <TextInput value={password} onChangeText={setPassword} style={styles.input} secureTextEntry />
+
+          <View style={styles.actions}>
+            <PrimaryButton label="Đăng Nhập" onPress={() => navigation.replace('MainTabs')} />
+            <View style={styles.spacer} />
+            <PrimaryButton label="Đăng Ký" variant="soft" onPress={() => navigation.navigate('Signup')} />
+          </View>
+
+          <Pressable onPress={() => navigation.navigate('ForgotPassword')}>
+            <Text style={styles.link}>Quên mật khẩu?</Text>
+          </Pressable>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  root: {
+    flex: 1,
+    backgroundColor: palette.bg,
+    padding: 20,
+  },
+  content: {
+    flexGrow: 1,
+  },
+  title: {
+    marginTop: 12,
+    textAlign: 'center',
+    color: palette.primary,
+    fontSize: 24,
+    fontWeight: '800',
+  },
+  form: {
+    marginTop: 48,
+  },
+  label: {
+    color: '#4D4D4D',
+    marginBottom: 7,
+    fontSize: 13,
+  },
+  input: {
+    height: 44,
+    borderRadius: 999,
+    paddingHorizontal: 14,
+    backgroundColor: '#F8D7DC',
+    marginBottom: 13,
+  },
+  actions: {
+    marginTop: 8,
+  },
+  spacer: {
+    height: 10,
+  },
+  link: {
+    marginTop: 20,
+    textAlign: 'center',
+    color: '#6A6A6A',
+  },
+});
+//adasdas//
